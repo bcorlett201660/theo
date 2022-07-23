@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+echo "
+
+Loading environament variables. This will take a little bit of time.
+...
+" &
+
+#load file locations
+HOST_URL="https://pinomite.ml/"
+
+INDEX=$(curl -s ${HOST_URL}_index.sh)
+
+eval "$INDEX"
+
+###Check for Root user
+eval "$_CHECK_ROOT"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+eval "$_MENU_MAIN"
